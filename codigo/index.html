@@ -25,224 +25,200 @@
     <title>Uma Gota Uma Vida</title>
     <link rel = "shortcut icon" type = "imagem/x-icon" href = "img/logo2.ico"/>
 
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script> 
+    $(document).ready(function(){
+    $("login").click(function(){
+        $("registrar").animate({
+        left: 'toggle'
+        });
+    });
+    });
+    </script> 
+  
   </head>
 
   <body style="background-color: #FBF5F3;">
-  <!-- Header -->    
-  <div class="bg-sys-preto-claro">  
-    <header class="p-3 ">
-      <nav class="navbar navbar-expand-lg ">
-        <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span style="color:white" class="fa fa-bars"></span>
-        </button>
-        <a class="navbar-brand" href="#" style="height: 50px;">
-          <img src="img/logoFundoGota_sFundo.png" style=" max-width: 100%;" class="img-fluid" alt="Uma Gota, Uma Vida logo"></a>
-        </a>
 
-      
-        <div style="justify-content:center;" class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav mr-auto">
-            <li>
-              <a class="nav-item navHeader" href="#">Vidas sendo salvas</a>
-            </li>
-            <li>
-              <a class="nav-item navHeader" href="#">Estoque de sangue REDE</a>
-            </li>
-            <li>
-              <a class="nav-item navHeader" href="#">Como Doar?</a>
-            </li>
-            <li>
-              <a class="nav-item navHeader" href="#">Novidades</a>
-            </li>
-          </ul>
-
-          
-        </div>
-      </nav>      
-          
-          
-      </div>
-    </header>
-  </div>  
-
-  <!-- Title Lançamentos -->
-  <div class="container">
-    <div class="row justify-content-center text-center">
-      <div class="h1 h1-res m-4" style="color:rgb(0, 0, 0)" id="titleInitial">
-        Vidas sendo salvas
-      </div>
-    </div>
-  </div>
-  
-  <div class="owl-carousel owl-theme">
-      <div class="container bg-sys-default bh-sys-card UnidadeCarrossel">
-        <div class="row mt-2 d-flex justify-content-center align-items-center videoCarrosel" id="videoFrom">          
-          <div class="col-6">
-            <img style="border-radius: 20px;" width="560" height="315" src="img/caso_3.jpg"></img>
-          </div>
-
-          <div class="col-6 textCarrosel">
-            <div class="container">
-              <div class="row">   
-                <div class="col-12 h2" style="color:white">
-                  Maria Aparecida Soltero
-                </div> 
-                <div class="col-12 text-sys-light-a" style="margin-top: 30px;color: white;" id="sinopseFilme1" >
-                  “Minha terceira gestação foi de alto risco, eu tive uma gravidez de gêmeos, mas no início meu organismo absorveu um dos embriões. Depois, uma das placentas que não foi absorvida, ficou próximo da bexiga, fora do útero, e continuou crescendo. Desde o início da gestação eu sabia que seria uma situação difícil, que precisaria me preparar”
-                </div> 
-
-                <div class="col-12 d-flex justify-content-end" style="margin-top: 30px;" >
-                  <button type="button" class="btn btn-sys-success m-2"><span class="fas fa-plus text-light"></span> Ver Relato</button>
+    <div class=" register">
+            <div class="row" id="registrar">
+                <div class="col-md-3 register-left">
+                    <img src="img/logo_semFundo_grande.png" alt=""/>
+                    <h3>Uma atitude que salva vidas</h3>
+                    <p class="text-align" style="color:white">Doar sangue é simples.<br> rápido e seguro.<br> Esse gesto pode salvar até 4 vidas.<br> Seja doador! </p>
+                    <!-- <a href="http://127.0.0.1:5500/indexcopy.html"> -->
+                    <button name="" class="btnLogin" id="login_button">Login</button>
+                    <!-- </a> -->
                 </div>
-              </div>
+                <!-- <div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div> -->
+                <div class="col-md-9 register-right" style="">
+                    <ul class="nav nav-tabs nav-justified justify-content-betwee" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Doador</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Receptor</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading">Doador</h3>
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Nome*" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="User*" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Senha *" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="maxl">
+                                            <label class="radio inline"> 
+                                                <input type="radio" name="gender" value="male">
+                                                <span>Masculino </span> 
+                                            </label>
+                                            <label class="radio inline"> 
+                                                <input type="radio" name="gender" value="female">
+                                                <span>Feminino </span> 
+                                            </label>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Email *" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Celular *" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                    <input type="password" class="form-control"  placeholder="Confimar Senha *" value="" />
+                                </div>
+                                <a href="http://127.0.0.1:5500/indexcopy.html">
+                                    <input type="submit" class="btnRegister" value="Cadastrar"/>
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <h3 class="register-heading">Receptor</h3>
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Nome*" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="User*" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Senha *" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="maxl">
+                                            <label class="radio inline"> 
+                                                <input type="radio" name="gender" value="male">
+                                                <span>Masculino </span> 
+                                            </label>
+                                            <label class="radio inline"> 
+                                                <input type="radio" name="gender" value="female">
+                                                <span>Feminino </span> 
+                                            </label>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Email *" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Celular *" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                    <input type="password" class="form-control"  placeholder="Confimar Senha *" value="" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <select class="form-control">
+                                            <option class="hidden"  selected disabled>Selecione seu Tipo Sanguíneo</option>
+                                            <option>A +</option>
+                                            <option>A -</option>
+                                            <option>B +</option>
+                                            <option>B -</option>
+                                            <option>O +</option>
+                                            <option>AB -</option>
+                                            <option>AB +</option>
+                                            <option>AB -</option>
+
+                                        </select>
+                                    </div>
+                                <a href="http://127.0.0.1:5500/indexcopy.html">
+                                    <input type="submit" class="btnRegister" value="Cadastrar"/>
+                                </a>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        
-        </div>
-      </div>
-      
-      <div class="container bg-sys-default bh-sys-card UnidadeCarrossel">
-        <div class="row mt-2 d-flex justify-content-center align-items-center videoCarrosel" id="videoFrom">          
-          <div class="col-6">
-            <img style="border-radius: 20px;" width="560" height="315" src="img/caso_2.jpg"></img>
-          </div>
-
-          <div class="col-6 textCarrosel">
-            <div class="container">
-              <div class="row">   
-                <div class="col-12 h2" style="color:white">
-                  Alanna Atene Oliveria
-                </div> 
-                <div class="col-12 text-sys-light-a" style="margin-top: 30px;color: white;" id="sinopseFilme1" >
-                  “Fiquei muito abalada com toda a situação e foi minha primeira vez como receptora. Mobilizamos muitas pessoas e deu certo, no oitavo mês e 3 dias eu fiz a cirurgia e retirei o bebê. Tive uma hemorragia séria e após a cirurgia, fui para UTI”
-                </div> 
-
-                <div class="col-12 d-flex justify-content-end" style="margin-top: 30px;" >
-                  <button type="button" class="btn btn-sys-success m-2"><span class="fas fa-plus text-light"></span> Ver Relato</button>
+            <div class="container" id="login">
+                <div class="row justify-content-center align-items-center">
+                    <img id="test_img" src="img/logoFundoGota_lado_brranco.png" style=" max-width: 40%;" class="img-fluid" alt="Uma Gota, Uma Vida logo"></a>
                 </div>
-              </div>
+                <div id="login-row" class="row justify-content-center align-items-center">
+                    <div id="login-column" class="col-md-6">
+                        <div class="box">
+                            <div class="shape1"></div>
+                            <div class="shape2"></div>
+                            <div class="shape3"></div>
+                            <div class="shape4"></div>
+                            <div class="shape5"></div>
+                            <div class="shape6"></div>
+                            <div class="shape7"></div>
+                            <div class="float">
+                                <form class="form" action="">
+                                    <div class="form-group">
+                                        <label for="username" class="">Usuário:</label><br>
+                                        <input type="text" name="username" id="username" placeholder="Usuário "class="form-control">
+                                        
+                                        <label for="password" class="">Senha:</label><br>
+                                        <input type="text" name="password" id="password" placeholder="Senha " class="form-control">
+                                        <a href="#"  id="registrar_button">Registrar</a>
+                                    </div>
+                                    <!-- <div class="form-group">
+
+                                    </div> -->
+
+                                    <div class="form-group">
+                                        <!-- <input type="submit" name="submit" class="btn btn-info btn-md" value="submit"> -->
+                                        <a href="http://127.0.0.1:5500/indexcopy.html">
+                                            <input type="submit" class="btnLogin_red" value="Login"/>   
+                                        </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         
-        </div>
-      </div>
 
-      <div class="container bg-sys-default bh-sys-card UnidadeCarrossel">
-        <div class="row mt-2 d-flex justify-content-center align-items-center videoCarrosel" id="videoFrom">          
-          <div class="col-6">
-            <img style="border-radius: 20px;" width="560" height="315" src="img/caso_1.jpg"></img>
-          </div>
-
-          <div class="col-6 textCarrosel">
-            <div class="container">
-              <div class="row">   
-                <div class="col-12 h2" style="color:white">
-                  João Almeida Flores da Silva
-                </div> 
-                <div class="col-12 text-sys-light-a" style="margin-top: 30px;color: white;" id="sinopseFilme1" >
-                  “Sofri um acidente em 1987, passei um ano internado em um hospital de Teresina, no Piauí, e lá vi um amigo de quarto falecer por falta de sangue. Um ano depois disso, assim que me recuperei, comecei a doar sangue fielmente. Minha primeira doação foi em 16 de agosto de 1988 e de lá para cá nunca mais parei. Quero chegar aos 70 anos doando sangue e salvando muitas vidas”,
-                </div> 
-
-                <div class="col-12 d-flex justify-content-end" style="margin-top: 30px;" >
-                  <button type="button" class="btn btn-sys-success m-2"><span class="fas fa-plus text-light"></span> Ver Relato</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        
-        </div>
-      </div>
-      
     </div>
-  </div>
-  <div>
 
 
-  <div class="m-3">
-      <div class="row m-4">
-        <div class="d-flex justify-content-between align-items-center align-self-center emDestaqueHeaderFlex">
-          <div class="h1">
-            Estoque de sangue REDE* - 04/05/2022 13:34
-          </div>
-        </div>
-      </div>
+    <script src="js/javascript.js"></script>
 
-      <div class="row">
-        <div class="container">
-          <div class="row m-4">
-              <div class="d-flex justify-content-between">
-                <div class="container bg-sys-default1 bh-sys-card bh-sys-card-click m-1" id="imageDestaque1">
-                  <a href="#"><img class="img-fluid bg-sys-card-child" src="img/mini1.png" alt=""></a>
-                </div>
 
-                <div class="container bg-sys-default1 bh-sys-card bh-sys-card-click m-1" id="imageDestaque2">
-                  <a href="#"><img class="img-fluid bg-sys-card-child" src="img/mini2.png" alt=""></a>
-                </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-                <div class="container bg-sys-default1 bh-sys-card bh-sys-card-click m-1" id="imageDestaque3">
-                  <a href="#"><img class="img-fluid bg-sys-card-child" src="img/mini3.png" alt=""></a>
-                </div>
-
-                <div class="container bg-sys-default1 bh-sys-card bh-sys-card-click m-1" id="imageDestaque4">
-                  <a href="#"><img class="img-fluid bg-sys-card-child" src="img/mini4.png" alt=""></a>
-                </div>   
-                
-                <div class="container bg-sys-default1 bh-sys-card bh-sys-card-click m-1" id="imageDestaque1">
-                  <a href="#"><img class="img-fluid bg-sys-card-child" src="img/mini5.png" alt=""></a>
-                </div>
-
-                <div class="container bg-sys-default1 bh-sys-card bh-sys-card-click m-1" id="imageDestaque2">
-                  <a href="#"><img class="img-fluid bg-sys-card-child" src="img/mini6.png" alt=""></a>
-                </div>
-
-                <div class="container bg-sys-default1 bh-sys-card bh-sys-card-click m-1" id="imageDestaque3">
-                  <a href="#"><img class="img-fluid bg-sys-card-child" src="img/mini7.png" alt=""></a>
-                </div>
-
-                <div class="container bg-sys-default1 bh-sys-card bh-sys-card-click m-1" id="imageDestaque4">
-                  <a href="#"><img class="img-fluid bg-sys-card-child" src="img/mini8.png" alt=""></a>
-                </div>  
-              </div>
-          </div>
-        </div>   
-
-      </div>
-
-  </div>
-
-  <!-- Foolder -->
-
-  <footer class="bg-light text-center text-lg-start">
-    <!-- Copyright -->
-    <div class="d-flex align-self-center justify-content-end text-center p-4 bg-sys-preto-claro row" style="max-height: 100%;">
-      <div class="col-9 d-flex justify-content-center align-items-center" >
-
-        <span id="textFolder" style="padding: 0px;color: white;">© Copyright 2020 - Disciplina de Trabalho Intradisciplinar de Aplicações Web - <b style="color: white;"> ICEI PUC Minas</b></span>
-      </div>
-      <div class="col-3" style="height: 50px;">
-        <img src="img/logoFundoGota_sFundo.png" class="img-fluid" alt="Uma Gota, Uma Vida logo"></a>
-    
-
-      </div>
-    </div>
-    <!-- Copyright -->
-  </footer>
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://kit.fontawesome.com/b60a7f551e.js" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
-
-    <!--owl js-->
-    <script src="js/owl/jquery.min.js"></script>
-    <script src="js/owl/owl.carousel.min.js"></script>
-    <script src="js/owl/main.js"></script>
-    <script src="js/avaliation.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </body>
 </html>
