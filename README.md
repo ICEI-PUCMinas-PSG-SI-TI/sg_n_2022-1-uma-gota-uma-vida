@@ -7,7 +7,7 @@
 * Eduardo Atene Silva
 * Isabella Aquino
 * Linekker Emmanuel Batista
-* Luisá Lúcia Nunes Moreira
+* Luisa Lúcia Nunes Moreira
 * Pedro Silvério Madureira
 
 ## Professores responsáveis
@@ -15,3 +15,6 @@
 * João Caram Santos de Oliveira
 * Marta Dias Moreira Noronha
 
+## Link Trello : Organização dos processos 
+
+* https://trello.com/invite/b/4RCg0iiw/46eef60f03c6d862f4dd01859e1baad0/uma-gota-uma-vida
