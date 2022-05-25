@@ -5,7 +5,7 @@
 ## Alunos integrantes da equipe
 
 * Eduardo Atene Silva
-* Isabella Aquino
+* Isabelle Aquino
 * Linekker Emmanuel Batista
 * Luisa Lúcia Nunes Moreira
 * Pedro Silvério Madureira
