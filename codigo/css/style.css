@@ -11,7 +11,16 @@
     text-decoration: none;
     color: var(--preto);
 }
-
+.nav-item {
+    font-size: x-large;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.h1 {
+    font-family: 'Josefin Sans', sans-serif;
+}
+.col-12 text-sys-light-a{
+    font-family: 'Josefin Sans', sans-serif;
+}
 head .navHeader{
     text-align: center;
 }
