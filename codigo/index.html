@@ -41,9 +41,10 @@
   </head>
 
   <body style="background-color: #FBF5F3;">
+    <input type="text" class="d-none" id="typePage" value="login"/>
 
-    <div class=" register">
-            <div class="row" id="registrar">
+    <div class=" register"  >
+            <div class="row" id="registrar" style="display: none;">
                 <div class="col-md-3 register-left">
                     <img src="img/logo_semFundo_grande.png" alt=""/>
                     <h3>Uma atitude que salva vidas</h3>
@@ -101,8 +102,7 @@
                                     <input type="password" id="senhaConfirmD" class="form-control"  placeholder="Confimar Senha *" value="" />
                                 </div>
                                 <!-- <a href="http://127.0.0.1:5500/indexcopy.html"> -->
-                                    <input type="submit" class="btnRegister" value="Cadastrar" input-send="cadastrar" input-tipo="doador"/>
-                                <!-- </a> -->
+                                    <span  style="cursor: pointer;text-align: center;margin-top: 20%;" class="btnLogin_red btn" value="Cadastrar" input-send="cadastrar" input-tipo="doador">Cadastrar</span>   
                                 </div>
                             </div>
                         </div>
@@ -111,13 +111,13 @@
                             <div class="row register-form">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Nome*" value="" />
+                                        <input type="text" id="nomeR" class="form-control" placeholder="Nome*" value="" />
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="User*" value="" />
+                                        <input type="text" id="userR" class="form-control" placeholder="User*" value="" />
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" class="form-control" placeholder="Senha *" value="" />
+                                        <input type="password" id="senhaR" class="form-control" placeholder="Senha *" value="" />
                                     </div>
                                     <div class="form-group">
                                         <div class="maxl">
@@ -136,13 +136,13 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Email *" value="" />
+                                        <input type="email"  id="emailR" class="form-control" placeholder="Email *" value="" />
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Celular *" value="" />
+                                        <input type="text"  id="celularR" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Celular *" value="" />
                                     </div>
                                     <div class="form-group">
-                                    <input type="password" class="form-control"  placeholder="Confimar Senha *" value="" />
+                                    <input type="password" id="senhaConfirmR"  class="form-control"  placeholder="Confimar Senha *" value="" />
                                     </div>
 
                                     <div class="form-group">
@@ -159,9 +159,7 @@
 
                                         </select>
                                     </div>
-                                <!-- <a href="http://127.0.0.1:5500/indexcopy.html"> -->
-                                    <input type="submit" class="btnRegister" value="Cadastrar" input-send="cadastrar" input-tipo="receptor"/>
-                                <!-- </a> -->
+                                    <span  style="cursor: pointer;text-align: center;margin-top: 10%;" class="btnLogin_red btn" value="Cadastrar" input-send="cadastrar" input-tipo="receptor">Cadastrar</span>   
                                 </div>
                             </div> 
                         </div>
@@ -186,10 +184,10 @@
                                 <form class="form" action="">
                                     <div class="form-group">
                                         <label for="username" class="">Usuário:</label><br>
-                                        <input type="text" name="username" id="username" placeholder="Usuário "class="form-control">
+                                        <input type="text" name="username" id="userLogin" placeholder="Usuário "class="form-control" >
                                         
                                         <label for="password" class="">Senha:</label><br>
-                                        <input type="text" name="password" id="password" placeholder="Senha " class="form-control">
+                                        <input type="password" name="password" id="senhaLogin" placeholder="Senha " class="form-control" >
                                         <a href="#"  id="registrar_button">Registrar</a>
                                     </div>
                                     <!-- <div class="form-group">
@@ -197,10 +195,7 @@
                                     </div> -->
 
                                     <div class="form-group">
-                                        <!-- <input type="submit" name="submit" class="btn btn-info btn-md" value="submit"> -->
-                                        <a href="http://127.0.0.1:5500/indexcopy.html">
-                                            <input type="submit" class="btnLogin_red" value="Login"/>   
-                                        </a>
+                                        <span  style="cursor: pointer;text-align: center" class="btnLogin_red btn" value="Login" input-send="login">Login</span>   
                                     </div>
                                 </form>
                             </div>

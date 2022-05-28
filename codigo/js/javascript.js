@@ -1,17 +1,23 @@
 $(document).ready(function(){
-    
-    $("#login").fadeOut();
+    let logado = localStorage.getItem('logado');  
+    if(logado!=null) {  
+        localStorage.removeItem('logado')
+    }
+
+    if($("#typePage").val() == "login"){
+        efeito("login",true);
+    }else{
+        efeito("cadastrar",true);
+    }
     $("#login_button").click(function(){
-        $("#registrar").fadeToggle(700);
-        $("#login").fadeIn(3000);
+        efeito("login",true);
     });
     $("#registrar_button").click(function(){
-        $("#login").fadeToggle(700);
-        $("#registrar").fadeIn(3000);
+        efeito("cadastrar",true);
     });
 
         
-    $(document).on("click", "input[input-send='cadastrar']", function(){
+    $(document).on("click", "span[input-send='cadastrar']", function(){
         debugger
         tipo = $(this).attr("input-tipo");
         if(tipo == "doador"){
@@ -31,54 +37,54 @@ $(document).ready(function(){
 
         let pode = true;
         if(nome=="" || nome==null){
-			$("#nome"+aux).parent().removeClass("was-validated").addClass("has-validation");
+			$("#nome"+aux).removeClass("is-valid").addClass("is-invalid");
 			pode = false;
 		}else{
-			$("#nome"+aux).parent().removeClass("has-validation").addClass("was-validated");
+			$("#nome"+aux).removeClass("is-invalid").addClass("is-valid");
 		}
 
         if(user=="" || user==null){
-			$("#user"+aux).parent().removeClass("was-validated").addClass("has-validation");
+			$("#user"+aux).removeClass("is-valid").addClass("is-invalid");
 			pode = false;
 		}else{
-			$("#user"+aux).parent().removeClass("has-validation").addClass("was-validated");
+			$("#user"+aux).removeClass("is-invalid").addClass("is-valid");
 		}
 
         if(senha=="" || senha==null){
-			$("#senha"+aux).parent().removeClass("was-validated").addClass("has-validation");
+			$("#senha"+aux).removeClass("is-valid").addClass("is-invalid");
 			pode = false;
 		}else{
-			$("#senha"+aux).parent().removeClass("has-validation").addClass("was-validated");
+			$("#senha"+aux).removeClass("is-invalid").addClass("is-valid");
 		}
 
         if(email=="" || email==null){
-			$("#email"+aux).parent().removeClass("was-validated").addClass("has-validation");
+			$("#email"+aux).removeClass("is-valid").addClass("is-invalid");
 			pode = false;
 		}else{
-			$("#email"+aux).parent().removeClass("has-validation").addClass("was-validated");
+			$("#email"+aux).removeClass("is-invalid").addClass("is-valid");
 		}
 
         if(celular=="" || celular==null){
-			$("#celular"+aux).parent().removeClass("was-validated").addClass("has-validation");
+			$("#celular"+aux).removeClass("is-valid").addClass("is-invalid");
 			pode = false;
 		}else{
-			$("#celular"+aux).parent().removeClass("has-validation").addClass("was-validated");
+			$("#celular"+aux).removeClass("is-invalid").addClass("is-valid");
 		}
 
         if(senhaConfirm=="" || senhaConfirm==null){
-			$("#senhaConfirm"+aux).parent().removeClass("was-validated").addClass("has-validation");
+			$("#senhaConfirm"+aux).removeClass("is-valid").addClass("is-invalid");
 			pode = false;
 		}else{
-			$("#senhaConfirm"+aux).parent().removeClass("has-validation").addClass("was-validated");
+			$("#senhaConfirm"+aux).removeClass("is-invalid").addClass("is-valid");
 		}
 
         if(pode){
             if(senhaConfirm != senha){
-                $("#senhaConfirm"+aux).parent().removeClass("was-validated").addClass("has-validation");
-			    $("#senha"+aux).parent().removeClass("was-validated").addClass("has-validation");
+                $("#senhaConfirm"+aux).removeClass("is-valid").addClass("is-invalid");
+			    $("#senha"+aux).removeClass("is-valid").addClass("is-invalid");
             }else{
-                $("#senhaConfirm"+aux).parent().removeClass("has-validation").addClass("was-validated");
-			    $("#senha"+aux).parent().removeClass("has-validation").addClass("was-validated");
+                $("#senhaConfirm"+aux).removeClass("is-invalid").addClass("is-valid");
+			    $("#senha"+aux).removeClass("is-invalid").addClass("is-valid");
 
                 let usuarios = localStorage.getItem('usuarios');  
                 if(usuarios==null) { 
@@ -95,20 +101,83 @@ $(document).ready(function(){
                 }; 
                 usuarios.push(pessoas);       
                 localStorage.setItem('usuarios', JSON.stringify(usuarios)); 
-          
+                efeito("login");
             }
      
         }
-  });
+    });
 
+            
+    $(document).on("click", "span[input-send='login']", function(){
+        let username = $("#userLogin").val();
+        let senhaLogin = $("#senhaLogin").val();
+        let pode = true;
+
+        if(username=="" || username==null){
+			$("#userLogin").removeClass("is-valid").addClass("is-invalid");
+			pode = false;
+		}else{
+			$("#userLogin").removeClass("is-invalid").addClass("is-valid");
+		}
+
+        if(senhaLogin=="" || senhaLogin==null){
+			$("#senhaLogin").removeClass("is-valid").addClass("is-invalid");
+			pode = false;
+		}else{
+			$("#senhaLogin").removeClass("is-invalid").addClass("is-valid");
+        }
+
+        if(pode){
+            let logado = localStorage.getItem('logado');  
+            achou = false;
+            loginAux = -1;
+            users = JSON.parse(localStorage.getItem('usuarios'));
+            for(i = 0;i < users.length; i++ ){
+                if(users[i].user == username){
+                    achou = true;
+                    if(users[i].senha == senhaLogin){
+                        loginAux = i;
+                    }else{ // senha incorreta
+                        $("#senhaLogin").removeClass("is-valid").addClass("is-invalid");                
+                    }
+                    break;
+                }
+            }
+
+            if(!achou){ // Caso não ache o usuario
+                $("#userLogin").removeClass("is-valid").addClass("is-invalid");
+                $("#senhaLogin").removeClass("is-valid").addClass("is-invalid");                
+            }
+
+            if(loginAux != -1){ //Verificar se pode fazer login.
+
+                let logado = localStorage.getItem('logado');  
+                if(logado!=null) {  
+                    localStorage.removeItem('logado')
+                }
+                localStorage.setItem('logado',  JSON.stringify({"id": loginAux})); 
+                window.location.href = "./main.html";
+            }
+        }
+     
+    });
 
 });
 
-
-/*
-Usuarios{
-    Pesss[]
+function efeito(type,fast=false) {
+    if(type == "login"){
+        if(fast)
+            $("#registrar").hide();
+        else
+            $("#registrar").fadeToggle(700);
+        $("#login").fadeIn(3000);
+        $("#typePage").value = "login";
+    }else{
+        if(fast)
+            $("#login").hide();
+        else
+            $("#login").fadeToggle(400);
+        $("#registrar").fadeIn(3000);
+        $("#typePage").value = "registrar";
+    }
 }
-}
-
-*/
