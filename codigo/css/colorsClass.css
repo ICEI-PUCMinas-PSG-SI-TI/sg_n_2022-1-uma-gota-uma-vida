@@ -1,13 +1,13 @@
 :root{
     --preto: #141414;
     --white: #ffffff;
-    --vermelho: #ff0000;
+    --vermelho: #c42e2ec1;
     --system-primary-azulMarinho: #000000;
     --system-primary-preto: #FBF5F3;
-    --system-primary-preto-claro:  #3296ee;
+    --system-primary-preto-claro:  #c42e2ec1;
     --system-primary-light: #907694;
     --system-primary-light-a: #ffffff;
-    --system-primary-default: #ff0000;
+    --system-primary-default: #c52f2f;
     --system-primary-default-escuro: rgb(121, 158, 117);
 
 }
