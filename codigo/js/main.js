@@ -12,6 +12,10 @@ $(document).ready(function(){
         window.location.href = "./index.html";
     })
 
+    $("#cadastrarRelato").click(function(){
+        window.location.href = "./formulario.html";
+    })
+
     if(logado==null) {  
         debugger
         $("#nomeLogadoPessoa").hide();
