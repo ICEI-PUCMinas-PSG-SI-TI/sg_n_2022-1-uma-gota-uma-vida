@@ -60,20 +60,34 @@
         <div style="justify-content:center;" class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav mr-auto">
             <li>
-              <a class="nav-item navHeader" href="#">Vidas sendo salvas</a>
+              <a class="nav-item navHeader" href="#vidasSalvas">Vidas sendo salvas</a>
             </li>
             <li>
-              <a class="nav-item navHeader" href="#">Estoque de sangue REDE</a>
+              <a class="nav-item navHeader" href="#estoqueSangue">Estoque de sangue REDE</a>
             </li>
             <li>
-              <a class="nav-item navHeader" href="#">Como Doar?</a>
+              <a class="nav-item navHeader" href="#comoDoar">Como Doar?</a>
             </li>
             <li>
-              <a class="nav-item navHeader" href="#">Novidades</a>
+              <a class="nav-item navHeader" href="#novidades">Novidades</a>
             </li>
           </ul>
 
           
+        </div>
+        <div style="justify-content:right;" class="collapse navbar-collapse text-right" id="navbarNavDropdown">
+          <button type="button" id="nomeLogadoPessoa" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+            
+          </button>
+          <button id="cadastrarNoSite"type="button" class="btn btn-danger " >
+            Cadastrar
+          </button>
+          <ul class="dropdown-menu" >
+            <li><a class="dropdown-item" id="cadastrarRelato" href="#">Cadastrar Relato</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" id="sairSessao" href="#">Sair</a></li>
+          </ul>  
+
         </div>
       </nav>      
           
@@ -84,7 +98,7 @@
 
   <!-- Title Lançamentos -->
   <div class="container">
-    <div class="row justify-content-center text-center">
+    <div class="row justify-content-center text-center" id="vidasSalvas">
       <div class="h1 h1-res m-4" style="color:rgb(0, 0, 0)" id="titleInitial">
         Vidas sendo salvas
       </div>
@@ -178,7 +192,7 @@
   <div class="m-3">
       <div class="row m-4">
         <div class="d-flex justify-content-between align-items-center align-self-center emDestaqueHeaderFlex">
-          <div class="h1">
+          <div class="h1" id="estoqueSangue">
             Estoque de sangue REDE* - 04/05/2022 13:34
           </div>
         </div>
@@ -229,7 +243,7 @@
 
   
   
-  <h1> Como Doar Sangue?</h1>
+  <h1 id="comoDoar"> Como Doar Sangue?</h1>
 <div class="passoapasso">
   <div class="container my-5">
 
@@ -250,7 +264,7 @@
 
 </div>
   
-<h1>Condições e Restrições</h1>
+<h1 >Condições e Restrições</h1>
   <p> Aqui você encontrará os principais critérios estabelecidos para a doação de sangue pela Anvisa (Agência Nacional de Vigilância Sanitária) para a proteção e segurança dos doadores e receptores. Em caso de dúvidas sobre situações delicadas e específicas convém procurar um profissional de saúde para esclarecê-las. De toda forma, um profissional sempre estará disponível para encaminhá-lo para uma triagem rigorosamente sigilosa no banco de sangue.</p>
   <p>Não desanime! Se você não pode doar agora, tente de novo em outra oportunidade ou indique um amigo ou conhecido!
   <p>Para mais informações acesse <a href="http://www.hemominas.mg.gov.br/doacao-e-atendimento-ambulatorial/doacao-de-sangue/condicoes-e-restricoes#criterios-gerais">hemominas.mg.gov.br</a></p>
@@ -308,8 +322,8 @@
 
 <!-- Noticias -->
 
-<h1> Notícias</h1>
-<div class="noticias">
+<h1 id="novidades"> Novidades</h1>
+<div  class="noticias">
 
   <div class="card mb-3" style="max-width: 540px;">
     <div class="row g-0">
@@ -389,6 +403,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/b60a7f551e.js" crossorigin="anonymous"></script>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
@@ -400,5 +417,6 @@
     <script src="js/owl/owl.carousel.min.js"></script>
     <script src="js/owl/main.js"></script>
     <script src="js/avaliation.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
