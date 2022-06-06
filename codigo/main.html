@@ -83,8 +83,8 @@
             Cadastrar
           </button>
           <ul class="dropdown-menu" >
-            <li><a class="dropdown-item" id="cadastrarRelato" href="#">Cadastrar Relato</a></li>
-            <li><hr class="dropdown-divider"></li>
+            <li class="relatoAuxDnone"><a class="dropdown-item" id="cadastrarRelato" href="#">Cadastrar Relato</a></li>
+            <li class="relatoAuxDnone"><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" id="sairSessao" href="#">Sair</a></li>
           </ul>  
 
@@ -96,7 +96,7 @@
     </header>
   </div>  
 
-  <!-- Title Lançamentos -->
+  <!-- Vidas sendo salvas -->
   <div class="container">
     <div class="row justify-content-center text-center" id="vidasSalvas">
       <div class="h1 h1-res m-4" style="color:rgb(0, 0, 0)" id="titleInitial">
@@ -105,7 +105,7 @@
     </div>
   </div>
   
-  <div class="owl-carousel owl-theme">
+  <div class="owl-carousel owl-theme innerRelatos">
       <div class="container bg-sys-default bh-sys-card UnidadeCarrossel">
         <div class="row mt-2 d-flex justify-content-center align-items-center videoCarrosel" id="videoFrom">          
           <div class="col-6">
@@ -413,10 +413,10 @@
     -->
 
     <!--owl js-->
+    <script src="js/main.js"></script>
+
     <script src="js/owl/jquery.min.js"></script>
     <script src="js/owl/owl.carousel.min.js"></script>
-    <script src="js/owl/main.js"></script>
     <script src="js/avaliation.js"></script>
-    <script src="js/main.js"></script>
   </body>
 </html>

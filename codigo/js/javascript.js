@@ -112,6 +112,7 @@ $(document).ready(function(){
         let username = $("#userLogin").val();
         let senhaLogin = $("#senhaLogin").val();
         let pode = true;
+        let users = JSON.parse(localStorage.getItem('usuarios'));
 
         if(username=="" || username==null){
 			$("#userLogin").removeClass("is-valid").addClass("is-invalid");
@@ -126,12 +127,9 @@ $(document).ready(function(){
 		}else{
 			$("#senhaLogin").removeClass("is-invalid").addClass("is-valid");
         }
-
-        if(pode){
-            let logado = localStorage.getItem('logado');  
-            achou = false;
-            loginAux = -1;
-            users = JSON.parse(localStorage.getItem('usuarios'));
+        let achou = false;
+        let loginAux = -1;
+        if(users != null){
             for(i = 0;i < users.length; i++ ){
                 if(users[i].user == username){
                     achou = true;
@@ -143,14 +141,15 @@ $(document).ready(function(){
                     break;
                 }
             }
+        }
 
-            if(!achou){ // Caso não ache o usuario
-                $("#userLogin").removeClass("is-valid").addClass("is-invalid");
-                $("#senhaLogin").removeClass("is-valid").addClass("is-invalid");                
-            }
+        if(!achou){ // Caso não ache o usuario
+            $("#userLogin").removeClass("is-valid").addClass("is-invalid");
+            $("#senhaLogin").removeClass("is-valid").addClass("is-invalid");                
+        }
 
+        if(pode){
             if(loginAux != -1){ //Verificar se pode fazer login.
-
                 let logado = localStorage.getItem('logado');  
                 if(logado!=null) {  
                     localStorage.removeItem('logado')
