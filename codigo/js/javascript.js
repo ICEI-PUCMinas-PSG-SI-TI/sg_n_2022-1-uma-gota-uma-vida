@@ -1,14 +1,24 @@
 $(document).ready(function(){
     let logado = localStorage.getItem('logado');  
+    let auxTypePage = JSON.parse(localStorage.getItem('auxTypePage')); 
     if(logado!=null) {  
         localStorage.removeItem('logado')
     }
-
-    if($("#typePage").val() == "login"){
-        efeito("login",true);
+    
+    if(auxTypePage!=null) {  
+        if(auxTypePage.typePage == "login")
+            efeito("login",true);
+        else
+            efeito("cadastrar",true);
+        localStorage.removeItem('auxTypePage')
     }else{
-        efeito("cadastrar",true);
+        if($("#typePage").val() == "login"){
+            efeito("login",true);
+        }else{
+            efeito("cadastrar",true);
+        }
     }
+
     $("#login_button").click(function(){
         efeito("login",true);
     });
@@ -18,7 +28,7 @@ $(document).ready(function(){
 
         
     $(document).on("click", "span[input-send='cadastrar']", function(){
-        debugger
+        
         tipo = $(this).attr("input-tipo");
         if(tipo == "doador"){
             aux = "D";
@@ -34,6 +44,7 @@ $(document).ready(function(){
         let email = $("#email"+aux).val();
         let celular = $("#celular"+aux).val();
         let senhaConfirm = $("#senhaConfirm"+aux).val();
+        let users = JSON.parse(localStorage.getItem('usuarios'));
 
         let pode = true;
         if(nome=="" || nome==null){
@@ -77,6 +88,25 @@ $(document).ready(function(){
 		}else{
 			$("#senhaConfirm"+aux).removeClass("is-invalid").addClass("is-valid");
 		}
+
+        let achou = false;
+        if(users != null){
+            
+            for(i = 0;i < users.length; i++ ){
+                if(users[i].nome == nome){
+                    achou = true;
+                    pode = false;
+                    $("#nome"+aux).removeClass("is-valid").addClass("is-invalid");
+                }
+                if(users[i].user == user){
+                    pode = false;
+                    achou = true;
+                    $("#user"+aux).removeClass("is-valid").addClass("is-invalid");
+                }
+                if(achou)
+                    break;
+            }
+        }
 
         if(pode){
             if(senhaConfirm != senha){

@@ -10,7 +10,7 @@ $(document).ready(function(){
     }
     
     $(document).on("click", "a[input-send='enviarCadastro']", function(){
-        debugger
+        
         let mensagemRelato = $("#mensagemRelato").val();
         let fileRelato = $("#fileRelato").val();
         let pode = true;
