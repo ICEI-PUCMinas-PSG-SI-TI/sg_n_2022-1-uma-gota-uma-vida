@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/colorsClass.css">
+
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+    
+    <!--fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+      </style>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+      <!-- Bootsnipp-->
+      <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--responsividade-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="css/requisitos.css" rel="stylesheet">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Local -->
+    <link href="bootstrap-5.1.3-dist/css/bootstrap.min.css" rel="stylesheet" >
+    <!--owl css-->
+    <link rel="stylesheet" href="css/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl/owl.theme.default.min.css">
+
+    <!-- Informações Site / Icons -->
+    <title>Uma Gota Uma Vida</title>
+    <link rel = "shortcut icon" type = "imagem/x-icon" href = "img/logo2.ico"/>
+
+  </head>
+
+  <body style="background-color: #FBF5F3;">
+  <!-- Header -->    
+  <div class="bg-sys-preto-claro">  
+    <header class="p-3 ">
+      <nav class="navbar navbar-expand-lg ">
+        <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span style="color:white" class="fa fa-bars"></span>
+        </button>
+        <a class="navbar-brand" href="#" style="height: 70px;">
+          <img src="img/logoFundoGota_sFundo.png" style=" max-width: 120%;" class="img-fluid" alt="Uma Gota, Uma Vida logo"></a>
+        </a>
+
+      
+        <div style="justify-content:center;" class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav mr-auto">
+            <li>
+              <a class="nav-item navHeader" href="#vidasSalvas">Vidas sendo salvas</a>
+            </li>
+            <li>
+              <a class="nav-item navHeader" href="#estoqueSangue">Estoque de sangue REDE</a>
+            </li>
+            <li>
+              <a class="nav-item navHeader" href="#comoDoar">Como Doar?</a>
+            </li>
+            <li>
+              <a class="nav-item navHeader" href="#novidades">Novidades</a>
+            </li>
+          </ul>
+
+          
+        </div>
+        <div style="justify-content:right;" class="collapse navbar-collapse text-right" id="navbarNavDropdown">
+          <button type="button" id="nomeLogadoPessoa" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+            
+          </button>
+          <button id="loginNoSite"type="button" class="btn btn-danger " >
+            Login
+          </button>
+          <button id="cadastrarNoSite"type="button" class="btn btn-danger " >
+            Cadastrar
+          </button>
+
+          <ul class="dropdown-menu" >
+            <li class="relatoAuxDnone"><a class="dropdown-item" id="cadastrarRelato" href="#">Cadastrar Relato</a></li>
+            <li class="relatoAuxDnone"><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" id="sairSessao" href="#">Sair</a></li>
+          </ul>  
+
+        </div>
+      </nav>      
+          
+          
+      </div>
+    </header>
+  </div>  
+
+  <!-- Vidas sendo salvas -->
+  <div class="container">
+    <div class="row justify-content-center text-center" id="vidasSalvas">
+      <div class="h1 h1-res m-4" style="color:rgb(0, 0, 0)" id="titleInitial">
+        Vidas sendo salvas
+      </div>
+    </div>
+  </div>
+  
+  <div class="owl-carousel owl-theme innerRelatos">
+      <div class="container bg-sys-default bh-sys-card UnidadeCarrossel">
+        <div class="row mt-2 d-flex justify-content-center align-items-center videoCarrosel" id="videoFrom">          
+          <div class="col-6">
+            <img style="border-radius: 20px;" width="560" height="315" src="img/caso_3.jpg"></img>
+          </div>
+
+          <div class="col-6 textCarrosel">
+            <div class="container">
+              <div class="row">   
+                <div class="col-12 h2" style="color:white">
+                  Maria Aparecida Soltero
+                </div> 
+                <div class="col-12 text-sys-light-a" style="margin-top: 30px;color: white;" id="sinopseFilme1" >
+                  “Minha terceira gestação foi de alto risco, eu tive uma gravidez de gêmeos, mas no início meu organismo absorveu um dos embriões. Depois, uma das placentas que não foi absorvida, ficou próximo da bexiga, fora do útero, e continuou crescendo. Desde o início da gestação eu sabia que seria uma situação difícil, que precisaria me preparar”
+                </div> 
+
+                <div class="col-12 d-flex justify-content-end" style="margin-top: 30px;" >
+                  <button src="main.html" type="button" class="btn btn-sys-success m-2"><span class="fas fa-plus text-light" style="color:white"></span> Ajuda-me</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+      
+      <div class="container bg-sys-default bh-sys-card UnidadeCarrossel">
+        <div class="row mt-2 d-flex justify-content-center align-items-center videoCarrosel" id="videoFrom">          
+          <div class="col-6">
+            <img style="border-radius: 20px;" width="560" height="315" src="img/caso_2.jpg"></img>
+          </div>
+
+          <div class="col-6 textCarrosel">
+            <div class="container">
+              <div class="row">   
+                <div class="col-12 h2" style="color:white">
+                  Alanna Atene Oliveria
+                </div> 
+                <div class="col-12 text-sys-light-a" style="margin-top: 30px;color: white;" id="sinopseFilme1" >
+                  “Fiquei muito abalada com toda a situação e foi minha primeira vez como receptora. Mobilizamos muitas pessoas e deu certo, no oitavo mês e 3 dias eu fiz a cirurgia e retirei o bebê. Tive uma hemorragia séria e após a cirurgia, fui para UTI”
+                </div> 
+
+                <div class="col-12 d-flex justify-content-end" style="margin-top: 30px;" >
+                  <button src="main.html" type="button" class="btn btn-sys-success m-2"><span class="fas fa-plus text-light"></span> Ajuda-me</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+
+      <div class="container bg-sys-default bh-sys-card UnidadeCarrossel">
+        <div class="row mt-2 d-flex justify-content-center align-items-center videoCarrosel" id="videoFrom">          
+          <div class="col-6">
+            <img style="border-radius: 20px;" width="560" height="315" src="img/caso_1.jpg"></img>
+          </div>
+
+          <div class="col-6 textCarrosel">
+            <div class="container">
+              <div class="row">   
+                <div class="col-12 h2" style="color:white">
+                  João Almeida Flores da Silva
+                </div> 
+                <div class="col-12 text-sys-light-a" style="margin-top: 30px;color: white;" id="sinopseFilme1" >
+                  “Sofri um acidente em 1987, passei um ano internado em um hospital de Teresina, no Piauí, e lá vi um amigo de quarto falecer por falta de sangue. Um ano depois disso, assim que me recuperei, comecei a doar sangue fielmente. Minha primeira doação foi em 16 de agosto de 1988 e de lá para cá nunca mais parei. Quero chegar aos 70 anos doando sangue e salvando muitas vidas”,
+                </div> 
+
+                <div class="col-12 d-flex justify-content-end" style="margin-top: 30px;" >
+                  <button src="main.html" type="button" class="btn btn-sys-success m-2"><span class="fas fa-plus text-light"></span> Ajuda-me</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div>
+
+
+  <div class="m-3">
+      <div class="row m-4">
+        <div class="d-flex justify-content-between align-items-center align-self-center emDestaqueHeaderFlex">
+          <div class="h1" id="estoqueSangue">
+            Estoque de sangue REDE* - 04/05/2022 13:34
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="container">
+          <div class="row m-4">
+              <div class="d-flex justify-content-between">
+                <div class="container bg-sys-default1 bh-sys-card bh-sys-card-click m-1" id="imageDestaque1">
+                  <a href="#"><img class="img-fluid bg-sys-card-child" src="img/mini1.png" alt=""></a>
+                </div>
+
+                <div class="container bg-sys-default1 bh-sys-card bh-sys-card-click m-1" id="imageDestaque2">
+                  <a href="#"><img class="img-fluid bg-sys-card-child" src="img/mini2.png" alt=""></a>
+                </div>
+
+                <div class="container bg-sys-default1 bh-sys-card bh-sys-card-click m-1" id="imageDestaque3">
+                  <a href="#"><img class="img-fluid bg-sys-card-child" src="img/mini3.png" alt=""></a>
+                </div>
+
+                <div class="container bg-sys-default1 bh-sys-card bh-sys-card-click m-1" id="imageDestaque4">
+                  <a href="#"><img class="img-fluid bg-sys-card-child" src="img/mini4.png" alt=""></a>
+                </div>   
+                
+                <div class="container bg-sys-default1 bh-sys-card bh-sys-card-click m-1" id="imageDestaque1">
+                  <a href="#"><img class="img-fluid bg-sys-card-child" src="img/mini5.png" alt=""></a>
+                </div>
+
+                <div class="container bg-sys-default1 bh-sys-card bh-sys-card-click m-1" id="imageDestaque2">
+                  <a href="#"><img class="img-fluid bg-sys-card-child" src="img/mini6.png" alt=""></a>
+                </div>
+
+                <div class="container bg-sys-default1 bh-sys-card bh-sys-card-click m-1" id="imageDestaque3">
+                  <a href="#"><img class="img-fluid bg-sys-card-child" src="img/mini7.png" alt=""></a>
+                </div>
+
+                <div class="container bg-sys-default1 bh-sys-card bh-sys-card-click m-1" id="imageDestaque4">
+                  <a href="#"><img class="img-fluid bg-sys-card-child" src="img/mini8.png" alt=""></a>
+                </div>  
+              </div>
+          </div>
+        </div>   
+
+      </div>
+
+  </div>
+
+  
+  
+  <h1 id="comoDoar"> Como Doar Sangue?</h1>
+<div class="passoapasso">
+  <div class="container my-5">
+
+    <ul id="progressbar" class="text-center">
+        <li class="active" id="step1"><div class="d-none d-md-block">Termos e Condições</div></li>
+        <li class="active" id="step2"><div class="d-none d-md-block">Agendamento</div></li>
+        <li class="active" id="step3"><div class="d-none d-md-block">Pronto!</div></li>
+    </ul>
+</div>
+</div>
+<div class="passo123">
+  <p class=h2>Passo 1 </p>
+  <p> Conferir se você se enquadra nos <a href="main.html">termos e condiçoes</a> estabelecidos para a doação de sangue pelo Hemominas.</p>
+  <p class="h2">Passo 2</p>
+  <p> Agendar o seu procedimento online através do  <a href="http://www.hemominas.mg.gov.br/unidades-e-contratantes/rede-hemominas/hemocentro">site do hemocentro</a> da sua cidade!</p>
+  <p class="h2"> Passo 3 </p>
+  <p> Pronto! Agora é só aparecer no local e horário agendados e você está pronto para salvar vidas! </p>
+
+</div>
+  
+<h1 >Condições e Restrições</h1>
+  <p> Aqui você encontrará os principais critérios estabelecidos para a doação de sangue pela Anvisa (Agência Nacional de Vigilância Sanitária) para a proteção e segurança dos doadores e receptores. Em caso de dúvidas sobre situações delicadas e específicas convém procurar um profissional de saúde para esclarecê-las. De toda forma, um profissional sempre estará disponível para encaminhá-lo para uma triagem rigorosamente sigilosa no banco de sangue.</p>
+  <p>Não desanime! Se você não pode doar agora, tente de novo em outra oportunidade ou indique um amigo ou conhecido!
+  <p>Para mais informações acesse <a href="http://www.hemominas.mg.gov.br/doacao-e-atendimento-ambulatorial/doacao-de-sangue/condicoes-e-restricoes#criterios-gerais">hemominas.mg.gov.br</a></p>
+  </p>
+  <div class="container mt-5 mb-5">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h4>Critérios Gerais</h4>
+        <ul class="timeline">
+          <li>
+            <a target="_blank">Alimentação e Hidratação</a>
+            <p>Para doar sangue você não pode estar de jejum. Se alimente normalmente durante o dia com refeições leves e pouco gordurosas e consuma bastante água. Ao fim da doação é indicado realizar um lanche e beber bastante água.</p>
+          </li>
+          <li>
+            <a target="_blank">Documentos</a>
+            
+            <p>Para doar sangue você precisa apresentar um documento original e oficial com foto, filiação e assinatura: Carteira de Identidade, carteiras de Conselhos de Classe reconhecidos oficialmente, Carteira de Trabalho, Certificado de Reservista, Carteira Nacional de Habilitação. Podem ser apresentados documentos digitais que possam ser verificados, desde que tenham assinatura para conferência.</p>
+          </li>
+          <li>
+            <a target="_blank">Estado Geral de Saúde</a>
+           
+            <p>Para efetuar a doação você precisa estar em plenas condições de saúde, portanto se tiver algum sintoma de doença, como febre e pressão arterial alterada, marque para outra data. A frequência cardíaca será avaliada na hora e deve estar entre 50 e 100 bpm. O nível de hemoglobina no sangue também será avaliado, precisando ser maior que 12,5g/dL. No caso de anemia hereditária ou carencial você não poderá doar, mas portadores de anemia falciforme podem doar normalmente. Você deve ter entre 16 e 69 anos e pesar ao menos 50kg.</p>
+          </li>
+          <li>
+            <a target="_blank">Alergias e uso de medicamentos</a>
+          
+            <p> Pessoas alérgicas a ÓXIDO DE ETILENO estão definitivamente inaptas a doar sangue. A presença de outras alergias não é um problema, contanto que não haja desconfiança de doenças e o uso de medicações esteja suspenso há pelo menos 72h. Quanto a outros tipos de medicação, é contraindicado que você pare sua terapia para doar sangue. Converse com seu clínico geral ou outro profissional da saúde para descobrir se você pode doar mesmo com o uso da medicação(isso inclui anticoncepcionais e colírios).</p>
+          </li>
+          <li>
+            <a target="_blank">Piercings, Tatuagens, Acupuntura, Procedimentos Estéticos/Médicos</a>
+        
+            <p>Nas condições de assepsia incorreta (infecções,profissionais não autorizados, etc), é preciso esperar pelo menos 12 meses para realizar a doação após piercings e procedimentos de acupuntura. 12 meses também é o tempo de espera após grande parte dos procedimentos cirúrgicos, porém convém confirmar com seu médico. Todas as tatuagens geram um tempo de espera de 12 meses após</p>
+          </li>
+          <li>
+            <a target="_blank">Doenças e Câncer</a>.
+        
+            <p>Portadores de doenças crônicas e síndromes devem confirmar com seu médico se a doação de sangue não fará mal nem para si próprio nem para o receptor. Pessoas portadoras de HIV, AIDS, ou quaisquer doenças autoimunes devem checar com o médico primeiro, porém, no geral, não podem realizar a doação. Pessoas com recentes bacterioses, verminoses, viroses e infecções devem esperar ao menos 6 meses para doar sangue, porém os casos variam. Pessoas com câncer do tipo carcinoma “in situ” do colo do útero ou carcinoma basocelular (tipo de tumor de pele) ou tumores benignos estão aptas a doar, mas qualquer outro tipo de câncer está definitivamente proibido.</p>
+          </li>
+          <li>
+            <a target="_blank">Uso de Bebidas Alcóolicas e Drogas Ilícitas</a>
+        
+            <p>O uso de drogas injetáveis ou histórico de uso desqualifica a pessoa para doação para sempre por ser considerado um comportamento de risco para algumas doenças. O uso de cocaína inalável desqualifica a pessoa por 12 meses. O uso de outras drogas pode ser checado com o profissional da saúde na hora do exame (não se preocupe, o exame é, por lei, protegido e anônimo!). A ingestão de álcool desqualifica a pessoa por 24 horas.
+
+            </p></li>
+            <li>
+              <a target="_blank">Situações de Risco</a>
+          
+              <p> Diversas situações são consideradas de risco e limitam a doação de sangue por tempos variados. Se você teve contato com material biológico possivelmente contaminado, teve comportamentos sexuais de risco (como sexo sem proteção com desconhecidos),tem algum histórico familiar de doença no sangue, compartilhou lâminas, pinças ou outros perfucortantes, ou esteve viajando recentemente por áreas endêmicas você pode acessar o <a href="http://www.hemominas.mg.gov.br/doacao-e-atendimento-ambulatorial/doacao-de-sangue/condicoes-e-restricoes#situacoes-de-risco-acrescido-para-aquisicao-de-doencas-transmissiveis-pelo-sangue">site do Hemominas</a> para checar o período. Também convém conversar com seu médico. Mulheres grávidas, lactantes e puérperas também devem esperar para doar.
+
+              </p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<!-- Noticias -->
+
+<h1 id="novidades"> Novidades</h1>
+<div  class="noticias">
+
+  <div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="img/hemominas-_1_97000.jpg" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Fundação Hemominas terá coleta de sangue em ônibus itinerante</h5>
+          <p class="card-text">Unidade móvel é adaptada para receber doadores e percorrerá municípios mineiros</p>
+          <p><a href="https://www.em.com.br/app/noticia/gerais/2022/05/27/interna_gerais,1369407/fundacao-hemominas-tera-coleta-de-sangue-em-onibus-itinerante.shtml"> Leia mais +</a> </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="https://s2.glbimg.com/b64TbJsSVO2KnPJbAFYNUl1G9FU=/0x0:1993x1248/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2022/c/X/Tazp3KTzeBIMcl8iFvEA/doacao-sangue.png" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Unidade de coleta de sangue em Varginha</h5>
+          <p class="card-text">Unidade de coleta de sangue deve começar a funcionar em breve em Varginha, diz secretário de Saúde. A cidade está sem um ponto de doação de sangue que funcione diariamente desde 2015.</p>
+          <p><a href="https://g1.globo.com/mg/sul-de-minas/noticia/2022/05/13/unidade-de-coleta-de-sangue-deve-comecar-a-funcionar-em-breve-em-varginha-diz-secretario-de-saude.ghtml">Leia mais + </a> </p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="https://i.em.com.br/-KhhRD3R-qiO8MPO4igqrBDk2JE=/675x0/smart/imgsapp.em.com.br/app/noticia_127983242361/2022/05/16/1366837/doacao-de-sangue_1_63511.jpg" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Hemominas promove caminhada no Parque Municipal de BH</h5>
+          <p class="card-text">Estoques dos tipos O positivo, A negativo, B negativo e AB negativo estão em estado de alerta; caminhada será nesta quinta(16/05/22), às 9h</p>
+          <p><a href="https://www.em.com.br/app/noticia/gerais/2022/05/16/interna_gerais,1366837/doacao-de-sangue-hemominas-promove-caminhada-no-parque-municipal-de-bh.shtml">Leia mais + </a> </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+</div>
+
+
+
+
+
+
+  <!-- Foolder -->
+
+  <footer class="bg-light text-center text-lg-start">
+    <!-- Copyright -->
+    <div class="d-flex align-self-center justify-content-end text-center p-4 bg-sys-preto-claro row" style="max-height: 100%;">
+      <div class="col-9 d-flex justify-content-center align-items-center" >
+
+        <span id="textFolder" style="padding: 0px;color: white;">© Copyright 2022 - Disciplina de Trabalho Intradisciplinar de Aplicações Web - <b style="color: white;"> ICEI PUC Minas</b> </span>
+      </div>
+      <div class="col-3" style="height: 50px;">
+        <img src="img/logoFundoGota_sFundo.png" class="img-fluid" alt="Uma Gota, Uma Vida logo"></a>
+    
+
+      </div>
+    </div>
+    <!-- Copyright -->
+  </footer>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b60a7f551e.js" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+
+    <!--owl js-->
+    <script src="js/main.js"></script>
+
+    <script src="js/owl/jquery.min.js"></script>
+    <script src="js/owl/owl.carousel.min.js"></script>
+    <script src="js/avaliation.js"></script>
+  </body>
+</html>
