@@ -66,11 +66,17 @@ $(document).ready(function(){
         })
     }
 
+    $('li.dropdown.mega-dropdown a').on('click', function (event) {
+        $(this).parent().toggleClass('open');
+    });
+
     
     $("#sairSessao").click(function(){
         localStorage.removeItem('logado');
-        window.location.reload();
-
+        if(window.location.href.includes('main'))
+            window.location.reload();
+        else
+            window.location.href = "./main.html";
     })
 
     $("#cadastrarNoSite").click(function(){
@@ -92,9 +98,14 @@ $(document).ready(function(){
     $("#cadastrarRelato").click(function(){
         window.location.href = "./formulario.html";
     })
+    $("#meuPerfil").click(function(){
+        window.location.href = "./perfil.html";
+    })
 
     if(logado==null) {  
         $("#nomeLogadoPessoa").hide();
+        $("#meuPerfil").hide();
+
         $("#loginNoSite").show();
         $("#cadastrarNoSite").show();
 
@@ -102,6 +113,7 @@ $(document).ready(function(){
         users = JSON.parse(localStorage.getItem('usuarios'))[logado.id];
         $("#nomeLogadoPessoa").text(users.nome);
         $("#nomeLogadoPessoa").show();
+        $("#meuPerfil").show();
         $("#loginNoSite").hide();
         $("#cadastrarNoSite").hide();
         if(users.tipo == "Doador"){

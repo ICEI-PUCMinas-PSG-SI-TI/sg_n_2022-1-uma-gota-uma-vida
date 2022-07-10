@@ -1,4 +1,65 @@
 $(document).ready(function(){
+
+    // o que a isabelle fez hoje
+    $('#inputcepR').focusout(function(){
+
+        
+        var cep = $('#inputcepR').val();
+        var viacep = 'https://viacep.com.br/ws/'+cep+'/json/'
+
+        $.ajax({
+            url:viacep,
+            type:'get',
+            dataType:'json',
+            success: function(data){
+                console.log(data)
+                $('#inputestadoR').val(data.uf)
+                $('#inputcidadeR').val(data.localidade)
+                $('#inputbairroR').val(data.bairro)
+                $('#inputruaR').val(data.logradouro)
+                $("#inputcepR").removeClass("is-invalid").addClass("is-valid");
+                $("#inputcidadeR").removeClass("is-invalid").addClass("is-valid");
+                $("#inputestadoR").removeClass("is-invalid").addClass("is-valid");
+                $("#inputbairroR").removeClass("is-invalid").addClass("is-valid");
+                $("#inputruaR").removeClass("is-invalid").addClass("is-valid");
+            },
+            error:function(error){
+                console.log(error)
+                $("#inputcepR").removeClass("is-valid").addClass("is-invalid");
+            }
+        })
+    });
+
+    $('#inputcepD').focusout(function(){
+
+        
+        var cep = $('#inputcepD').val();
+        var viacep = 'https://viacep.com.br/ws/'+cep+'/json/'
+
+        $.ajax({
+            url:viacep,
+            type:'get',
+            dataType:'json',
+            success: function(data){
+                console.log(data)
+                $('#inputestadoD').val(data.uf)
+                $('#inputcidadeD').val(data.localidade)
+                $('#inputbairroD').val(data.bairro)
+                $('#inputruaD').val(data.logradouro)
+                $("#inputcepD").removeClass("is-invalid").addClass("is-valid");
+                $("#inputcidadeD").removeClass("is-invalid").addClass("is-valid");
+                $("#inputestadoD").removeClass("is-invalid").addClass("is-valid");
+                $("#inputbairroD").removeClass("is-invalid").addClass("is-valid");
+                $("#inputruaD").removeClass("is-invalid").addClass("is-valid");
+            },
+            error:function(error){
+                console.log(error)
+                $("#inputcepD").removeClass("is-valid").addClass("is-invalid");
+            }
+        })
+    });
+    // --------
+    
     let logado = localStorage.getItem('logado');  
     let auxTypePage = JSON.parse(localStorage.getItem('auxTypePage')); 
     if(logado!=null) {  
@@ -42,7 +103,12 @@ $(document).ready(function(){
         let user = $("#user"+aux).val();
         let senha = $("#senha"+aux).val();
         let email = $("#email"+aux).val();
+        let cep = $("#cep"+aux).val();
         let celular = $("#celular"+aux).val();
+        let estado = $('#inputestado'+aux).val();
+        let cidade = $('#inputcidade'+aux).val();
+        let bairro = $('#inputbairro'+aux).val();
+        let rua = $('#inputrua'+aux).val();
         let senhaConfirm = $("#senhaConfirm"+aux).val();
         let users = JSON.parse(localStorage.getItem('usuarios'));
 
@@ -81,7 +147,38 @@ $(document).ready(function(){
 		}else{
 			$("#celular"+aux).removeClass("is-invalid").addClass("is-valid");
 		}
-
+// aa
+        // if(cep=="" || cep==null){
+		// 	$("#inputcep").removeClass("is-valid").addClass("is-invalid");
+		// 	pode = false;
+		// }else{
+		// 	$("#inputcep").removeClass("is-invalid").addClass("is-valid");
+		// }
+        if(estado=="" || estado==null){
+			$("#inputestado"+aux).removeClass("is-valid").addClass("is-invalid");
+			pode = false;
+		}else{
+			$("#inputestado"+aux).removeClass("is-invalid").addClass("is-valid");
+		}
+        if(cidade=="" || cidade==null){
+			$("#inputcidade"+aux).removeClass("is-valid").addClass("is-invalid");
+			pode = false;
+		}else{
+			$("#inputcidade"+aux).removeClass("is-invalid").addClass("is-valid");
+		}
+        if(bairro=="" || bairro==null){
+			$("#inputbairro"+aux).removeClass("is-valid").addClass("is-invalid");
+			pode = false;
+		}else{
+			$("#inputbairro"+aux).removeClass("is-invalid").addClass("is-valid");
+		}
+        if(rua=="" || rua==null){
+			$("#inputrua"+aux).removeClass("is-valid").addClass("is-invalid");
+			pode = false;
+		}else{
+			$("#inputrua"+aux).removeClass("is-invalid").addClass("is-valid");
+		}
+//aaa
         if(senhaConfirm=="" || senhaConfirm==null){
 			$("#senhaConfirm"+aux).removeClass("is-valid").addClass("is-invalid");
 			pode = false;
@@ -127,7 +224,12 @@ $(document).ready(function(){
                                 "senha": senha,
                                 "email": email,
                                 "celular": celular,
-                                "tipo": tipoUsuario
+                                "tipo": tipoUsuario,
+                                "cep":cep,
+                                "estado":estado,
+                                "cidade":cidade,
+                                "bairro":bairro,
+                                "rua":rua,
                 }; 
                 usuarios.push(pessoas);       
                 localStorage.setItem('usuarios', JSON.stringify(usuarios)); 
@@ -190,6 +292,7 @@ $(document).ready(function(){
         }
      
     });
+
 
 });
 

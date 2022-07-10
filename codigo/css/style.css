@@ -3,7 +3,21 @@
     --white: #ffffff;
     --vermelho: #ff0000;
 }
+.nomeLogado{
+    margin-left: 0%;
+    text-align: justify;
+}
+.imagenes{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 150px;
+    line-height: 30px;
+}
+.info{
+    text-align: left;
+    margin-left:20px;
 
+}
 *{
     margin: 0;
     padding: 0;
@@ -11,15 +25,23 @@
     text-decoration: none;
     color: var(--preto);
 }
+h2{
+    font-family: 'Josefin Sans', sans-serif !important;
+    margin: 10;
+    margin-left: 20px;
+}
 .nav-item {
     font-size: x-large;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Josefin Sans', sans-serif !important;
 }
 .h1 {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Josefin Sans', sans-serif !important;
+}
+.classe{
+    font-family: 'Josefin Sans', sans-serif !important;
 }
 .col-12 text-sys-light-a{
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Josefin Sans', sans-serif !important;
 }
 head .navHeader{
     text-align: center;

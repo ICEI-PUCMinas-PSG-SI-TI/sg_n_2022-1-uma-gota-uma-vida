@@ -38,6 +38,8 @@
             });
         });
     </script>
+    <!-- jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 </head>
 
@@ -56,15 +58,15 @@
                 <!-- </a> -->
             </div>
             <!-- <div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>  -->
-            <div class="col-md-9 register-right" style="">
+            <div class="col-md-9 register-right">
                 <ul class="nav nav-tabs nav-justified justify-content-betwee" id="myTab" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" style="font-size: 20px;" id="home-tab" data-toggle="tab" href="#home" role="tab"
-                            aria-controls="home" aria-selected="true">Doador</a>
+                        <a class="nav-link active" style="font-size: 20px;" id="home-tab" data-toggle="tab" href="#home"
+                            role="tab" aria-controls="home" aria-selected="true">Doador</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="profile-tab" style="font-size: 20px;" data-toggle="tab" href="#profile" role="tab"
-                            aria-controls="profile" aria-selected="false">Receptor</a>
+                        <a class="nav-link" id="profile-tab" style="font-size: 20px;" data-toggle="tab" href="#profile"
+                            role="tab" aria-controls="profile" aria-selected="false">Receptor</a>
                     </li>
                 </ul>
                 <div class="tab-content" id="myTabContent">
@@ -82,6 +84,16 @@
                                     <input type="password" id="senhaD" class="form-control" placeholder="Senha *"
                                         value="" />
                                 </div>
+                                <div class="form-group">
+                                    <input type="text" id="inputcepD" class="form-control" placeholder="CEP"
+                                        value="" />
+                                </div>
+                                
+                                <div class="form-group">
+                                    <input type="text" id="inputestadoD" class="form-control" placeholder="Estado"
+                                        value="" />
+                                </div>
+
                                 <div class="form-group">
                                     <div class="maxl">
                                         <label class="radio inline">
@@ -109,6 +121,22 @@
                                     <input type="password" id="senhaConfirmD" class="form-control"
                                         placeholder="Confimar Senha *" value="" />
                                 </div>
+                                <div class="form-group">
+                                    <input type="text" id="inputcidadeD" class="form-control" placeholder="Cidade"
+                                    value="" />
+                                </div>
+                                
+                                    <div class="form-group">
+                                        <input type="text" id="inputbairroD" class="form-control"
+                                            placeholder="Bairro " value="" />
+                                    </div>
+                                    
+                                        <div class="form-group">
+                                            <input type="text" id="inputruaD" class="form-control"
+                                                placeholder="Rua" value="" />
+                                        </div>
+                                    
+                                                    <!-- ----------------------->
                                 <!-- <a href="http://127.0.0.1:5500/indexcopy.html"> -->
                                 <span style="cursor: pointer;text-align: center;margin-top: 20%;"
                                     class="btnLogin_red btn" value="Cadastrar" input-send="cadastrar"
@@ -130,6 +158,34 @@
                                     <input type="password" id="senhaR" class="form-control" placeholder="Senha *"
                                         value="" />
                                 </div>
+            
+                                <div class="form-group">
+                                    <input type="text" id="inputcepR" class="form-control" placeholder="CEP"
+                                        value="" />
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" id="inputestadoR" class="form-control" placeholder="Estado"
+                                        value="" />
+                                </div>
+                                  
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option class="hidden" selected disabled>Selecione seu Tipo
+                                            Sanguíneo</option>
+                                        <option>A +</option>
+                                        <option>A -</option>
+                                        <option>B +</option>
+                                        <option>B -</option>
+                                        <option>O +</option>
+                                        <option>O -</option>
+                                        <option>AB -</option>
+                                        <option>AB +</option>
+                                        <option>AB -</option>
+
+                                    </select>
+                                </div>
+
                                 <div class="form-group">
                                     <div class="maxl">
                                         <label class="radio inline">
@@ -157,85 +213,86 @@
                                 <div class="form-group">
                                     <input type="password" id="senhaConfirmR" class="form-control"
                                         placeholder="Confimar Senha *" value="" />
-                                </div>
+                                </div>                        
+                                        
+                                    <div class="form-group">
+                                        <input type="text" id="inputcidadeR" class="form-control" placeholder="Cidade"
+                                        value="" />
+                                    </div>
+                                
+                                    <div class="form-group">
+                                        <input type="text" id="inputbairroR" class="form-control"
+                                            placeholder="Bairro " value="" />
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <input type="text" id="inputruaR" class="form-control"
+                                            placeholder="Rua" value="" />
+                                    </div>
 
-                                <div class="form-group">
-                                    <select class="form-control">
-                                        <option class="hidden" selected disabled>Selecione seu Tipo Sanguíneo</option>
-                                        <option>A +</option>
-                                        <option>A -</option>
-                                        <option>B +</option>
-                                        <option>B -</option>
-                                        <option>O +</option>
-                                        <option>O -</option>
-                                        <option>AB -</option>
-                                        <option>AB +</option>
-                                        <option>AB -</option>
-
-                                    </select>
+                                                    <span style="cursor: pointer;text-align: center;margin-top: 10%;"
+                                                        class="btnLogin_red btn" value="Cadastrar"
+                                                        input-send="cadastrar" input-tipo="receptor">Cadastrar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <span style="cursor: pointer;text-align: center;margin-top: 10%;"
-                                    class="btnLogin_red btn" value="Cadastrar" input-send="cadastrar"
-                                    input-tipo="receptor">Cadastrar</span>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container" id="login">
-            <div class="row justify-content-center align-items-center">
-                <img id="test_img" src="img/logoFundoGota_lado_brranco.png" style=" max-width: 40%;" class="img-fluid"
-                    alt="Uma Gota, Uma Vida logo"></a>
-            </div>
-            <div id="login-row" class="row justify-content-center align-items-center">
-                <div id="login-column" class="col-md-6">
-                    <div class="box">
-                        <div class="shape1"></div>
-                        <div class="shape2"></div>
-                        <div class="shape3"></div>
-                        <div class="shape4"></div>
-                        <div class="shape5"></div>
-                        <div class="shape6"></div>
-                        <div class="shape7"></div>
-                        <div class="float">
-                            <form class="form" action="">
-                                <div class="form-group">
-                                    <label for="username" class="">Usuário:</label><br>
-                                    <input type="text" name="username" id="userLogin" placeholder="Usuário "
-                                        class="form-control">
-
-                                    <label for="password" class="">Senha:</label><br>
-                                    <input type="password" name="password" id="senhaLogin" placeholder="Senha "
-                                        class="form-control">
-                                    <a href="#" id="registrar_button">Registrar</a>
+                            <div class="container" id="login">
+                                <div class="row justify-content-center align-items-center">
+                                    <img id="test_img" src="img/logoFundoGota_lado_brranco.png" style=" max-width: 40%;"
+                                        class="img-fluid" alt="Uma Gota, Uma Vida logo"></a>
                                 </div>
-                                <!-- <div class="form-group">
+                                <div id="login-row" class="row justify-content-center align-items-center">
+                                    <div id="login-column" class="col-md-6">
+                                        <div class="box">
+                                            <div class="shape1"></div>
+                                            <div class="shape2"></div>
+                                            <div class="shape3"></div>
+                                            <div class="shape4"></div>
+                                            <div class="shape5"></div>
+                                            <div class="shape6"></div>
+                                            <div class="shape7"></div>
+                                            <div class="float">
+                                                <form class="form" action="">
+                                                    <div class="form-group">
+                                                        <label for="username" class="">Usuário:</label><br>
+                                                        <input type="text" name="username" id="userLogin"
+                                                            placeholder="Usuário " class="form-control">
+
+                                                        <label for="password" class="">Senha:</label><br>
+                                                        <input type="password" name="password" id="senhaLogin"
+                                                            placeholder="Senha " class="form-control">
+                                                        <a href="#" id="registrar_button">Registrar</a>
+                                                    </div>
+                                                    <!-- <div class="form-group">
 
                                     </div> -->
 
-                                <div class="form-group">
-                                    <span style="cursor: pointer;text-align: center" class="btnLogin_red btn"
-                                        value="Login" input-send="login">Login</span>
+                                                    <div class="form-group">
+                                                        <span style="cursor: pointer;text-align: center"
+                                                            class="btnLogin_red btn" value="Login"
+                                                            input-send="login">Login</span>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </form>
+                            </div>
+
+
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
 
-    </div>
+                        <script src="js/javascript.js"></script>
 
 
-    <script src="js/javascript.js"></script>
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+                        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
 
 </html>
