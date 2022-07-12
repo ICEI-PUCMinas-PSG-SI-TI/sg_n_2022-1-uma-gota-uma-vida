@@ -5,15 +5,19 @@
 ## Alunos integrantes da equipe
 
 * Eduardo Atene Silva
-* Isabelle Aquino
+* Isabelle Aquino - Responsável pelo sistema de recompensas, design da página de perfil, api do cep e passo-a-passo.
 * Linekker Emmanuel Batista
 * Luisa Lúcia Nunes Moreira
-* Pedro Silvério Madureira
+* Pedro Silvério Madureira - Responsável por criar a página dos Hemocentros, pesquisa e tela para cadastro de relatos.
 
 ## Professores responsáveis
 
 * João Caram Santos de Oliveira
 * Marta Dias Moreira Noronha
+
+## Link do vídeo para apresentação
+
+*
 
 ## Link Trello : Organização dos processos 
 
