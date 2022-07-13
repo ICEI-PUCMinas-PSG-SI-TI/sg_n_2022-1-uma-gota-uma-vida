@@ -4,9 +4,9 @@
   
 ## Alunos integrantes da equipe
 
-* Eduardo Atene Silva
+* Eduardo Atene Silva - Responsável pelo gerenciamento da equipe, resolução de problemas  e diversas outras atividades atribuídas no trello, bem como: Responsável pelo CRUD de toda plataforma; criação de telas como: Relatos, Cadastros, Login e boa parte da tela principal; Adaptações/Ajustes na responsividade e animações/UX do site; entre outras tarefas.
 * Isabelle Aquino - Responsável pelo sistema de recompensas, design da página de perfil, api do cep e passo-a-passo.
-* Linekker Emmanuel Batista
+* Linekker Emmanuel Batista - API Google Maps e pesquisa por bairro
 * Luisa Lúcia Nunes Moreira
 * Pedro Silvério Madureira - Responsável por criar a página dos Hemocentros, documentação e tela para cadastro de relatos.
 
