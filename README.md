@@ -17,7 +17,7 @@
 
 ## Instruções para utilização
 
-Basta ir em "codigo", logo em seguida abrir o "index.html" que direcionará para o cadastro
+Basta ir em "codigo", logo em seguida abrir o "main.html" que direcionará para a tela principal
 
 ## Link do vídeo para apresentação
 
