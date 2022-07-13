@@ -15,6 +15,10 @@
 * João Caram Santos de Oliveira
 * Marta Dias Moreira Noronha
 
+## Instruções para utilização
+
+Basta ir em "codigo", logo em seguida abrir o "index.html" que direcionará para o cadastro
+
 ## Link do vídeo para apresentação
 
 *
